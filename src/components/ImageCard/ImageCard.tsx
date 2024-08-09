@@ -1,9 +1,12 @@
-/* eslint-disable react/prop-types */
+import { IImageCardProps } from "types";
 import css from "./ImageCard.module.css";
 
-const ImageCard = ({ image, openModal }) => {
-  const handleClick = () => {
-    openModal(image);
+const ImageCard: React.FC<IImageCardProps> = ({
+  image,
+  onClick,
+}): React.ReactNode => {
+  const handleClick: VoidFunction = () => {
+    onClick(image);
   };
 
   return (
