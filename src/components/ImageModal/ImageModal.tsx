@@ -1,20 +1,18 @@
-/* eslint-disable react/prop-types */
-import { useEffect } from "react";
 import ReactModal from "react-modal";
+import { IImageModalProps } from "types";
 import css from "./ImageModal.module.css";
 
-const ImageModal = ({ isOpen, closeModal, image }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+const ImageModal: React.FC<IImageModalProps> = ({
+  image,
+  isOpen,
+  closeModal,
+}): React.ReactElement => {
+  ReactModal.setAppElement("#root");
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  const handleContextMenu = (e: React.MouseEvent<HTMLDivElement>): void => {
+    e.preventDefault();
+    closeModal();
+  };
 
   return (
     <ReactModal
