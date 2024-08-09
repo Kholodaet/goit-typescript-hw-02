@@ -1,7 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
 import { useState, useEffect } from "react";
 
-import fetchImages from "../../helpers/unsplash-api";
+import fetchImages from "../../unsplash-api/unsplash-api";
 import toast, { Toaster } from "react-hot-toast";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ImageGallery from "../ImageGallery/ImageGallery";
