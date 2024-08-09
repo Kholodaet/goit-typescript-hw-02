@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ImageCard } from "components";
 import { IImageGalleryProps } from "types";
-import { perPage } from "unsplash-api/unsplash-api";
+import { perPage } from "api";
 import css from "./ImageGallery.module.css";
 
 const ImageGallery: React.FC<IImageGalleryProps> = ({

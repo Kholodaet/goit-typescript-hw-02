@@ -9,7 +9,7 @@ import {
 } from "components";
 import { usePages, useModal } from "hooks";
 import { Photos } from "types";
-import { getPhotos } from "unsplash-api/unsplash-api";
+import { getPhotos } from "api";
 
 const App: React.FC = (): React.ReactNode => {
   const [request, setRequest] = useState<string>("");
